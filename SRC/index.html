@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f4ef">
+    <title>Minhas tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Minhas tarefas, início">
+          <span class="brand-mark" aria-hidden="true">t.</span>
+          <span>todo<span class="brand-period">.</span></span>
+        </a>
+        <span class="topbar-note">Um passo de cada vez</span>
+      </header>
+
+      <section class="task-panel" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow"><span class="eyebrow-line"></span> SEU ESPAÇO DE FOCO</p>
+          <h1 id="page-title">Tire da cabeça.<br><span>Coloque no papel.</span></h1>
+          <p class="intro-copy">Pequenas tarefas, grandes respiros. Organize seu dia no seu ritmo.</p>
+        </div>
+
+        <form id="task-form" class="task-form" novalidate>
+          <label for="task-input">O que você precisa fazer?</label>
+          <div class="input-row">
+            <input
+              id="task-input"
+              name="text"
+              type="text"
+              autocomplete="off"
+              placeholder="Ex.: marcar consulta no dentista"
+              aria-describedby="character-count form-message"
+              required
+            >
+            <button id="submit-button" class="add-button" type="submit" disabled>
+              <span>Adicionar</span>
+              <span class="button-plus" aria-hidden="true">+</span>
+            </button>
+          </div>
+          <div class="form-meta">
+            <span id="form-message" class="form-message" role="status" aria-live="polite"></span>
+            <span id="character-count" class="character-count">0 / 500</span>
+          </div>
+        </form>
+
+        <section class="list-section" aria-labelledby="list-title">
+          <div class="list-heading">
+            <h2 id="list-title">Sua lista</h2>
+            <span id="task-count" class="task-count">0 tarefas</span>
+          </div>
+
+          <p id="list-status" class="list-status" role="status" aria-live="polite">Carregando suas tarefas...</p>
+          <ul id="task-list" class="task-list" aria-label="Tarefas salvas"></ul>
+        </section>
+
+        <footer class="panel-footer">
+          <span class="footer-spark" aria-hidden="true">✳</span>
+        </footer>
+      </section>
+
+      <p class="page-note">LEMBRETES SIMPLES PARA DIAS MAIS LEVES</p>
+    </main>
+  </body>
+</html>
